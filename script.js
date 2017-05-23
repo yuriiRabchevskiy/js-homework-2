@@ -74,7 +74,7 @@ while (whileLoop < 5) {
 // repeat prompt until user put required number, then display result of prompt
 console.log('Using while');
 var userNumber = 0;
-while (userNumber < 100) {
+while (userNumber <= 100) {
     userNumber = prompt('Please type a number greater than 100');
 }
 console.log(userNumber);
@@ -85,18 +85,15 @@ do {
     userNum = prompt('Please type a number greater than 100');
     console.log(userNum);
 }
-while (userNum < 100);
+while (userNum <= 100);
 console.log(userNum);
 
 // - Show in console using for.
 var dies = prompt('Please type a number');
-var arr = [];
+var row = "";
 for (var i = 0; i <= dies; i++) {
-    for (var j = 0; j < i; j++) {
-        arr.push('#');
-        console.log(arr[j]);
-    }
-    console.log('\n');
+   row = row + "#"
+   console.log(row);
 }
 
 
