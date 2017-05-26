@@ -73,27 +73,33 @@ while (whileLoop < 5) {
 // - Write code which will ask user (prompt ) to put number greater than 100, 
 // repeat prompt until user put required number, then display result of prompt
 console.log('Using while');
-var userNumber = 0;
-while (userNumber <= 100) {
+var userNumber = prompt('Please type a number greater than 100');
+while (isNaN(userNumber) || userNumber <= 100) {
     userNumber = prompt('Please type a number greater than 100');
 }
 console.log(userNumber);
+
 console.log('-------------------------------');
+
 console.log('Using do/while');
-var userNum = 0;
+
 do {
-    userNum = prompt('Please type a number greater than 100');
-    console.log(userNum);
+    var userNum = prompt('Please type a number greater than 100');
 }
-while (userNum <= 100);
+while (isNaN(userNum) || userNum <= 100);
 console.log(userNum);
 
 // - Show in console using for.
 var dies = prompt('Please type a number');
-var row = "";
-for (var i = 0; i <= dies; i++) {
-   row = row + "#"
-   console.log(row);
+if (isNaN(dies)) {
+    dies = prompt('Please type a number');
+} else {
+    var row = "";
+    for (var i = 0; i <= dies; i++) {
+        row = row + "#"
+        console.log(row);
+    }
 }
+
 
 
