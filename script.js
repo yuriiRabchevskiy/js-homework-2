@@ -1,9 +1,9 @@
 // - Find and display total sum of numbers from 1 to 3;
-
-var a = 1, b = 2, c = 3;
-var sum;
-sum = a + b + c;
-console.log('Find and display total sum of numbers from 1 to 3 it"s: ' + sum);
+function summ(a, b, c) {
+    var sum = a + b + c;
+    console.log('Find and display total sum of numbers from 1 to 3 it"s: ' + sum);
+}
+summ(1, 2, 3)
 
 // - Find and display total sum of numbers from 20 to 220;
 
@@ -72,34 +72,41 @@ while (whileLoop < 5) {
 
 // - Write code which will ask user (prompt ) to put number greater than 100, 
 // repeat prompt until user put required number, then display result of prompt
-console.log('Using while');
-var userNumber = prompt('Please type a number greater than 100');
-while (isNaN(userNumber) || userNumber <= 100) {
-    userNumber = prompt('Please type a number greater than 100');
+function usedWhile() {
+    console.log('Using while');
+    var userNumber = prompt('Please type a number greater than 100');
+    while (isNaN(userNumber) || userNumber <= 100) {
+        userNumber = prompt('Please type a number greater than 100');
+    }
+    console.log(userNumber);
+    console.log('-------------------------------');
 }
-console.log(userNumber);
 
-console.log('-------------------------------');
-
-console.log('Using do/while');
-
-do {
-    var userNum = prompt('Please type a number greater than 100');
+function usedDoWhile() {
+    console.log('Using do/while');
+    do {
+        var userNum = prompt('Please type a number greater than 100');
+    }
+    while (isNaN(userNum) || userNum <= 100);
+    console.log(userNum);
+    console.log('-------------------------------');
 }
-while (isNaN(userNum) || userNum <= 100);
-console.log(userNum);
+
 
 // - Show in console using for.
-var dies = prompt('Please type a number');
-if (isNaN(dies)) {
-    dies = prompt('Please type a number');
-} else {
-    var row = "";
-    for (var i = 0; i <= dies; i++) {
-        row = row + "#"
-        console.log(row);
+function showDies() {
+    var dies = prompt('Please type a number');
+    if (isNaN(dies)) {
+        dies = prompt('Please type a number');
+    } else {
+        var row = "";
+        for (var i = 0; i <= dies; i++) {
+            row = row + "#"
+            console.log(row);
+        }
     }
 }
+
 
 
 
